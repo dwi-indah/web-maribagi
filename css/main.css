@@ -1,0 +1,240 @@
+.margin-section {
+    margin-top: 160px;
+}
+
+.padding-section {
+    padding: 100px 1rem;
+}
+
+.intro, .agenda {
+    background: #E8F1F9;
+}
+
+.subtitle::after {
+    content:"";
+    display:block;
+    width: 10rem;
+    max-width:100px;
+    border-bottom: 0.3em solid #0463CA;
+    margin: .5rem 0 2rem;
+}
+
+.hero {
+    background-image: url('../images/hero-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    margin: 0 auto;
+}
+
+.hero > .container {
+    margin: 0 auto;
+    padding: 8rem 1rem;
+}
+
+.intro img {
+    width: 100%;
+    height: auto;
+}
+
+.program-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.program-icon {
+    text-align: center;
+}
+
+.program-icon img {
+    width: 160px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+}
+
+.gallery-list {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.gallery-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-list .gallery-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(4, 47, 94, 0.5);
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.gallery-list .gallery-link a {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-left: -2rem;
+}
+
+.gallery-list:hover .gallery-link {
+    opacity: 1;
+}
+
+.agenda .card {
+    margin: 1rem 0;
+}
+
+.agenda-card-detail, .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .5rem 0;
+}
+
+.relawan {
+    width: 100%;
+    height: 200px;
+    background-image: url('../images/relawan-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.relawan .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 2rem 1rem;
+}
+
+.family-image {
+    border-radius: 100%;
+    width: 80%;
+    height: auto;
+}
+
+.contact iframe {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+}
+
+.contact .subtitle {
+    margin-top: 2rem;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+footer a {
+    text-decoration: none;
+    color: initial;
+}
+
+.footer-content {
+    background: #E8F1F9;
+    padding: 2rem 0;
+}
+
+.footer-content-detail {
+    margin: 1rem 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+}
+
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));    
+    }
+    
+    .gallery-list .gallery-link a {
+        top: 30%;
+        left: 30%;
+    }
+   
+    .agenda .card {
+        margin: 0;
+    }
+        
+    .contact .subtitle {
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .padding-section {
+        padding: 160px 0;
+    }
+    
+    .hero .container {
+        width: 70%;
+    }
+    
+    .program-detail {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        text-align: initial;
+    }
+    
+    .program-detail:nth-child(even) {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+    
+    .program-icon {
+        flex-shrink: 200px;
+    }
+    
+    .gallery-list .gallery-link a {
+        top: 40%;
+        left: 40%;
+    }
+
+    .relawan .container {
+        flex-direction: row;
+        padding: 5rem 0;
+    }
+        
+    .footer-content-detail {
+        margin: 0;
+    }
+
+    .footer-content-detail:nth-child(2) {
+        padding: 0 2rem;
+    }
+
+}
